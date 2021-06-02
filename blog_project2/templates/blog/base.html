@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<!-- {%load blog_post%} -->
+{%load static%} 
+
+<html lang="en" dir="ltr">
+    <head> 
+    <meta charset="utf-8">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+     <link rel="stylesheet" href="{% static "css/blog.css"%}">
+      <title>{%block title %}{%endblock%}</title> 
+     </head> 
+      <body> 
+        <div class="content"> 
+            {%block content%}{%endblock%} 
+         </div> 
+          <div class="sidebar">
+               <h2>DURGA'S BLOG</h2>
+               
+                <p>Here You can see My Python Updations...</p> 
+                <p>The total number of post Published up to <span style="font-size: 30px;">{%total_post%}</span>
+                </p>
+                <h3>Show latest post</h3>
+                {%show_latest_post 3%}
+                
+                <h3>Most commented post</h3>
+                {%get_most_commented_posts 3%}
+                
+             </div> 
+             </body> 
+              </html>

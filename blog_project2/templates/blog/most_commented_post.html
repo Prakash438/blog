@@ -1,0 +1,5 @@
+<ul>
+    {%for post in ms%}
+    <p><a href="{{post.get_absolute_url}}">{{post.title}}</a></p> 
+    {%endfor%}
+</ul>
